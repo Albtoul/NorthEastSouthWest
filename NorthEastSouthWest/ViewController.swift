@@ -13,6 +13,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! SecondViewController
+        let button = sender as! UIButton
+        
+        dest.text = button.currentTitle
+    }
+    
+    @IBAction func unwind(_ unwindSegue: UIStoryboardSegue) {
+        
+    }
 
 
 }
